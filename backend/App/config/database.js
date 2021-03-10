@@ -7,13 +7,3 @@ module.exports = function(){
         database: "heroku_6cf099ec35994cc"
     });
 }
-
-// const mysql = require('mysql');
-// module.exports = function(){
-//     return mysql.createConnection({ //Criando conexão com banco
-//         host: "localhost",
-//         user: "root",
-//         password: "",
-//         database: "squad5"
-//     });
-// }

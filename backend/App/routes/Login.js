@@ -11,7 +11,7 @@ module.exports = function (app){
         check('senha', 'A senha precisa ter no mínimo 5 dígitos e no máximo 8!').exists().isLength({min:5,max:8}),
         check('confirme', 'A senha precisa ser igual a digitada anteriormente!').exists().isLength({min:5,max:8}),
     ], (req, res) =>{
-        res.header("Access-Control-Allow-Origin", "http://localhost:3000"); //https://conscire-front.herokuapp.com
+        res.header("Access-Control-Allow-Origin", "https://conscire-front.herokuapp.com"); //http://localhost:3000
 
         const nome = req.body.nome;
         const email = req.body.email;
@@ -69,7 +69,7 @@ module.exports = function (app){
     })
     
     app.post('/login', (req, res) =>{
-        res.header("Access-Control-Allow-Origin", "http://localhost:3000"); //https://conscire-front.herokuapp.com
+        res.header("Access-Control-Allow-Origin", "https://conscire-front.herokuapp.com"); //http://localhost:3000
 
         const email = req.body.email;
         const senha= req.body.senha;

@@ -1,7 +1,7 @@
 const {check, validationResult } = require("express-validator");
 module.exports = function (app){
     app.get('/comentarios/retorna', (req, res)=>{
-        res.header("Access-Control-Allow-Origin", "http://localhost:3000"); //https://conscire-front.herokuapp.com
+        res.header("Access-Control-Allow-Origin", "https://conscire-front.herokuapp.com"); 
         var connection = app.app.config.database;
         var comentarioModel = app.app.models.comentarioModel;
         comentarioModel.getComentario(connection, 
@@ -24,7 +24,7 @@ module.exports = function (app){
         check('msg', 'A mensagem precisa ter pelo menos 3 caracteres').exists().isLength({min:3}),
     ], (req, res)=>{
 
-        res.header("Access-Control-Allow-Origin", "http://localhost:3000"); //https://conscire-front.herokuapp.com
+        res.header("Access-Control-Allow-Origin", "https://conscire-front.herokuapp.com"); 
 
         var {nome, sobrenome, msg} = req.body
 

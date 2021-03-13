@@ -1,6 +1,6 @@
 module.exports = function (app){
     app.get('/monitoramento/retorna', (req, res)=>{
-        res.header("Access-Control-Allow-Origin", "http://localhost:3000"); //https://conscire-front.herokuapp.com
+        res.header("Access-Control-Allow-Origin", "https://conscire-front.herokuapp.com"); 
 
         var connection = app.app.config.database;
         var monitoramentoModel = app.app.models.monitoramentoModel;
